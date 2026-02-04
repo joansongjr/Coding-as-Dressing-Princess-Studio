@@ -1,0 +1,7 @@
+{
+  "name": "Coding as Dressing: Princess Studio",
+  "description": "A high-fashion, Princess Maker 4 inspired studio that translates code logic into elegant outfits for beginners.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

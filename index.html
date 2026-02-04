@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princess Studio | Coding as Dressing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif+SC:wght@200;400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pm-gold: #d4af37;
+            --pm-rose: #fdf2f2;
+            --pm-border: #e2d1c3;
+        }
+        body {
+            font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+            background-color: #fffaf5;
+            color: #3e2723;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .ornate-border {
+            border: 1px solid var(--pm-gold);
+            position: relative;
+        }
+        .ornate-border::before {
+            content: '';
+            position: absolute;
+            top: 2px; left: 2px; right: 2px; bottom: 2px;
+            border: 1px solid var(--pm-border);
+            pointer-events: none;
+        }
+        .pm-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--pm-border);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+        }
+        .attribute-bar {
+            height: 4px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .attribute-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--pm-gold), #f3e5ab);
+            transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* IDE Scrollbars */
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .scrollbar-thumb-white\/10::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root" class="h-full"></div>
+</body>
+</html>
